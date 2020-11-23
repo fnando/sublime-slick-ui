@@ -83,8 +83,9 @@ theme = Theme.new do
   variable :bluish, "#007acc"
   variable :light_gray, "#f5f5f5"
   variable :gray, "#999"
-  variable :bluish_selected, "#3976ff"
+  variable :white, "#fff"
 
+  variable :selected_color, "#3976ff"
   variable :sidebar_bg, "#e9e9e9"
   variable :sidebar_border_color, "#ddd"
   variable :sidebar_row_hover_bg, "#2e5fe111"
@@ -92,22 +93,22 @@ theme = Theme.new do
   variable :sidebar_row_fg, "#252525"
   variable :sidebar_title_fg, sidebar_row_fg
   variable :sidebar_row_selected_bg, "#3976ff"
-  variable :sidebar_row_selected_fg, "#fff"
+  variable :sidebar_row_selected_fg, white
   variable :tab_bar_bg, "#f3f3f3"
-  variable :tab_active_bg, "#fff"
+  variable :tab_active_bg, white
   variable :tab_active_fg, blackish
   variable :tab_inactive_bg, "#e3e3e3"
   variable :tab_inactive_fg, grayish
   variable :tab_border_color, "#d9d9d9"
-  variable :label_fg, "#fff"
-  variable :label_hover_fg, "#fff"
+  variable :label_fg, white
+  variable :label_hover_fg, white
   variable :tab_close_button_tint, "#7d7d7d"
 
-  variable :panel_bg, "#fff"
+  variable :panel_bg, white
   variable :panel_border, "#ddd"
 
   variable :status_button_hover_bg, "#ffffff22"
-  variable :sidebar_button_color, "#fff"
+  variable :sidebar_button_color, white
 
   variable :status_fg, "#888"
   variable :status_bg, "#e6e7e9"
@@ -118,17 +119,22 @@ theme = Theme.new do
   variable :tooltip_bg, "#e9e9e9"
   variable :tooltip_fg, blackish
 
+  variable :overlay_border_color, "#e9e9e9"
+  variable :input_bg, "#eeeeef"
+  variable :button_bg, "#006ef9"
+
   # Generic button group spacing
   rule :icon_button_group,
        spacing: 6
 
   icon_names.each do |rule_name|
     opacity = 0.3
-    selected_opacity = 0.6
+    selected_opacity = 1
 
     rule rule_name,
          "layer0.opacity" => 0,
-         "layer0.texture" => "",
+         "layer0.tint" => "",
+         "layer0.texture": image("button-selected.png"),
          "layer1.texture" => image("#{dasherize(rule_name)}.png"),
          "layer1.opacity" => opacity,
          content_margin: [14, 11]
@@ -141,8 +147,8 @@ theme = Theme.new do
          parents: [
            {class: "icon_button_control", attributes: ["selected"]}
          ],
-         "layer0.opacity": 1,
-         "layer0.texture": image("button-selected.png"),
+         "layer0.opacity" => 1,
+         "layer0.tint" => "",
          "layer1.opacity": selected_opacity
   end
 
@@ -255,7 +261,7 @@ theme = Theme.new do
 
   rule :sidebar_button_control, {
     attributes: ["hover"],
-    "layer1.tint": "#fff",
+    "layer1.tint": white,
     "layer1.opacity": 0.1
   }
 
@@ -342,7 +348,7 @@ theme = Theme.new do
     "layer2.tint": tab_active_bg,
     "layer2.opacity": 1.0,
     "layer3.texture": image("tab-selected.png"),
-    "layer3.tint": bluish_selected,
+    "layer3.tint": selected_color,
     "layer3.inner_margin": [0, 3, 0, 0]
   }
 
@@ -545,11 +551,11 @@ theme = Theme.new do
   rule :text_line_control, {
     "content_margin": 4,
     "layer0.inner_margin": 2,
-    "layer0.tint": "#eeeeef",
+    "layer0.tint": input_bg,
     "layer0.opacity": 1.0,
     "layer1.draw_center": false,
     "layer1.texture": image("input--bw1--br2.png"),
-    "layer1.tint": "#eeeeef",
+    "layer1.tint": input_bg,
     "layer1.inner_margin": 6,
     "layer1.opacity": 1.0
   }
@@ -565,11 +571,11 @@ theme = Theme.new do
   rule :label_control, {
     parents: [{class: "button_control"}],
     "font.size": 13.0,
-    fg: "#fff"
+    fg: white
   }
 
   rule :button_control, {
-    "layer0.tint": "#006ef9",
+    "layer0.tint": button_bg,
     "layer0.opacity": 1,
     "layer1.texture": "",
     "layer2.texture": "",
@@ -583,7 +589,7 @@ theme = Theme.new do
     row_padding: 0,
     tint_index: 0,
     "layer0.opacity": 1.0,
-    tint_modifier: "#fff"
+    tint_modifier: white
   }
   rule :table_row, {
     parents: [{class: "auto_complete"}],
@@ -649,6 +655,12 @@ theme = Theme.new do
     outside_vspacing: 5
   }
 
+  rule :text_output_control, {
+    parents: [{class: "window"}],
+    color_scheme_tint: white,
+    content_margin: [10, 10, 10, 10]
+  }
+
   # Quick Panel ################################################################
   %w[
     quick_panel_row
@@ -662,7 +674,7 @@ theme = Theme.new do
     rule :quick_panel_label, {
       parents: [{class: parent}],
       fg: gray,
-      match_fg: bluish_selected,
+      match_fg: selected_color,
       selected_fg: gray,
       selected_match_fg: gray
     }
@@ -687,7 +699,7 @@ theme = Theme.new do
     # Quick Panel Row (Selected, Normal)
     rule parent, {
       attributes: ["selected", "!hover"],
-      "layer0.tint": bluish_selected,
+      "layer0.tint": selected_color,
       "layer0.opacity": 1
     }
 
@@ -695,39 +707,39 @@ theme = Theme.new do
       parents: [
         {class: parent, attributes: ["selected", "!hover"]}
       ],
-      fg: "#fff",
-      match_fg: "#fff",
-      selected_fg: "#fff",
-      selected_match_fg: "#fff"
+      fg: white,
+      match_fg: white,
+      selected_fg: white,
+      selected_match_fg: white
     }
 
     rule :quick_panel_path_label, {
       parents: [{class: parent, attributes: ["selected"]}],
-      fg: "#fff",
-      match_fg: "#fff",
-      selected_fg: "#fff",
-      selected_match_fg: "#fff"
+      fg: white,
+      match_fg: white,
+      selected_fg: white,
+      selected_match_fg: white
     }
 
     # Quick Panel Row (Selected, Hover)
     rule parent, {
       attributes: %w[selected hover],
-      "layer0.tint": bluish_selected,
+      "layer0.tint": selected_color,
       "layer0.opacity": 1
     }
 
     rule :quick_panel_label, {
       parents: [{class: parent, attributes: %w[selected hover]}],
-      fg: "#fff",
-      match_fg: "#fff",
-      selected_fg: "#fff",
-      selected_match_fg: "#fff"
+      fg: white,
+      match_fg: white,
+      selected_fg: white,
+      selected_match_fg: white
     }
 
     # Quick Panel Row (Undo Hover/Selected)
     rule parent, {
       attributes: ["!selected", "!hover"],
-      "layer0.tint": "#fff",
+      "layer0.tint": white,
       "layer0.opacity": 1
     }
 
@@ -750,27 +762,27 @@ theme = Theme.new do
     # background
     "layer1.inner_margin": [20, 15, 20, 30],
     "layer1.texture": image("overlay--mt10--bw0--br0.png"),
-    "layer1.tint": "#fff",
+    "layer1.tint": white,
     "layer1.opacity": 1.0,
     # border
     "layer2.inner_margin": [16, 11, 16, 26],
     "layer2.texture": image("overlay--mt10--bw0--br0.png"),
-    "layer2.tint": "#e9e9e9",
+    "layer2.tint": overlay_border_color,
     "layer2.draw_center": false,
     "layer2.opacity": 1.0
   }
 
   rule :text_line_control, {
     parents: [{class: "overlay_control"}],
-    color_scheme_tint: "#fff",
+    color_scheme_tint: white,
     content_margin: 10,
-    "layer0.tint" => "#fff",
-    "layer1.tint" => "#fff"
+    "layer0.tint" => white,
+    "layer1.tint" => white
   }
 
   rule :quick_panel, {
     row_padding: [10, 10, 10, 10],
-    "layer0.tint": "#fff",
+    "layer0.tint": white,
     "layer0.opacity": 1.0
   }
 

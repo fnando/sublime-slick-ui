@@ -5,7 +5,8 @@
     "bluish": "#007acc",
     "light_gray": "#f5f5f5",
     "gray": "#999",
-    "bluish_selected": "#3976ff",
+    "white": "#fff",
+    "selected_color": "#3976ff",
     "sidebar_bg": "#e9e9e9",
     "sidebar_border_color": "#ddd",
     "sidebar_row_hover_bg": "#2e5fe111",
@@ -31,7 +32,10 @@
     "status_bg": "#e6e7e9",
     "status_border": "#ddd",
     "tooltip_bg": "#e9e9e9",
-    "tooltip_fg": "#252525"
+    "tooltip_fg": "#252525",
+    "overlay_border_color": "#e9e9e9",
+    "input_bg": "#eeeeef",
+    "button_bg": "#006ef9"
   },
   "rules": [
     {
@@ -45,7 +49,8 @@
         11
       ],
       "layer0.opacity": 0,
-      "layer0.texture": "",
+      "layer0.texture": "Slick/Themes/Default/button-selected.png",
+      "layer0.tint": "",
       "layer1.opacity": 0.3,
       "layer1.texture": "Slick/Themes/Default/icon-case.png"
     },
@@ -54,13 +59,13 @@
       "attributes": [
         "hover"
       ],
-      "layer1.opacity": 0.6
+      "layer1.opacity": 1
     },
     {
       "class": "icon_case",
       "layer0.opacity": 1,
-      "layer0.texture": "Slick/Themes/Default/button-selected.png",
-      "layer1.opacity": 0.6,
+      "layer0.tint": "",
+      "layer1.opacity": 1,
       "parents": [
         {
           "class": "icon_button_control",
@@ -77,7 +82,8 @@
         11
       ],
       "layer0.opacity": 0,
-      "layer0.texture": "",
+      "layer0.texture": "Slick/Themes/Default/button-selected.png",
+      "layer0.tint": "",
       "layer1.opacity": 0.3,
       "layer1.texture": "Slick/Themes/Default/icon-context.png"
     },
@@ -86,13 +92,13 @@
       "attributes": [
         "hover"
       ],
-      "layer1.opacity": 0.6
+      "layer1.opacity": 1
     },
     {
       "class": "icon_context",
       "layer0.opacity": 1,
-      "layer0.texture": "Slick/Themes/Default/button-selected.png",
-      "layer1.opacity": 0.6,
+      "layer0.tint": "",
+      "layer1.opacity": 1,
       "parents": [
         {
           "class": "icon_button_control",
@@ -109,7 +115,8 @@
         11
       ],
       "layer0.opacity": 0,
-      "layer0.texture": "",
+      "layer0.texture": "Slick/Themes/Default/button-selected.png",
+      "layer0.tint": "",
       "layer1.opacity": 0.3,
       "layer1.texture": "Slick/Themes/Default/icon-highlight.png"
     },
@@ -118,13 +125,13 @@
       "attributes": [
         "hover"
       ],
-      "layer1.opacity": 0.6
+      "layer1.opacity": 1
     },
     {
       "class": "icon_highlight",
       "layer0.opacity": 1,
-      "layer0.texture": "Slick/Themes/Default/button-selected.png",
-      "layer1.opacity": 0.6,
+      "layer0.tint": "",
+      "layer1.opacity": 1,
       "parents": [
         {
           "class": "icon_button_control",
@@ -141,7 +148,8 @@
         11
       ],
       "layer0.opacity": 0,
-      "layer0.texture": "",
+      "layer0.texture": "Slick/Themes/Default/button-selected.png",
+      "layer0.tint": "",
       "layer1.opacity": 0.3,
       "layer1.texture": "Slick/Themes/Default/icon-in-selection.png"
     },
@@ -150,13 +158,13 @@
       "attributes": [
         "hover"
       ],
-      "layer1.opacity": 0.6
+      "layer1.opacity": 1
     },
     {
       "class": "icon_in_selection",
       "layer0.opacity": 1,
-      "layer0.texture": "Slick/Themes/Default/button-selected.png",
-      "layer1.opacity": 0.6,
+      "layer0.tint": "",
+      "layer1.opacity": 1,
       "parents": [
         {
           "class": "icon_button_control",
@@ -173,7 +181,8 @@
         11
       ],
       "layer0.opacity": 0,
-      "layer0.texture": "",
+      "layer0.texture": "Slick/Themes/Default/button-selected.png",
+      "layer0.tint": "",
       "layer1.opacity": 0.3,
       "layer1.texture": "Slick/Themes/Default/icon-preserve-case.png"
     },
@@ -182,13 +191,13 @@
       "attributes": [
         "hover"
       ],
-      "layer1.opacity": 0.6
+      "layer1.opacity": 1
     },
     {
       "class": "icon_preserve_case",
       "layer0.opacity": 1,
-      "layer0.texture": "Slick/Themes/Default/button-selected.png",
-      "layer1.opacity": 0.6,
+      "layer0.tint": "",
+      "layer1.opacity": 1,
       "parents": [
         {
           "class": "icon_button_control",
@@ -205,7 +214,8 @@
         11
       ],
       "layer0.opacity": 0,
-      "layer0.texture": "",
+      "layer0.texture": "Slick/Themes/Default/button-selected.png",
+      "layer0.tint": "",
       "layer1.opacity": 0.3,
       "layer1.texture": "Slick/Themes/Default/icon-regex.png"
     },
@@ -214,13 +224,13 @@
       "attributes": [
         "hover"
       ],
-      "layer1.opacity": 0.6
+      "layer1.opacity": 1
     },
     {
       "class": "icon_regex",
       "layer0.opacity": 1,
-      "layer0.texture": "Slick/Themes/Default/button-selected.png",
-      "layer1.opacity": 0.6,
+      "layer0.tint": "",
+      "layer1.opacity": 1,
       "parents": [
         {
           "class": "icon_button_control",
@@ -237,7 +247,8 @@
         11
       ],
       "layer0.opacity": 0,
-      "layer0.texture": "",
+      "layer0.texture": "Slick/Themes/Default/button-selected.png",
+      "layer0.tint": "",
       "layer1.opacity": 0.3,
       "layer1.texture": "Slick/Themes/Default/icon-use-buffer.png"
     },
@@ -246,13 +257,13 @@
       "attributes": [
         "hover"
       ],
-      "layer1.opacity": 0.6
+      "layer1.opacity": 1
     },
     {
       "class": "icon_use_buffer",
       "layer0.opacity": 1,
-      "layer0.texture": "Slick/Themes/Default/button-selected.png",
-      "layer1.opacity": 0.6,
+      "layer0.tint": "",
+      "layer1.opacity": 1,
       "parents": [
         {
           "class": "icon_button_control",
@@ -269,7 +280,8 @@
         11
       ],
       "layer0.opacity": 0,
-      "layer0.texture": "",
+      "layer0.texture": "Slick/Themes/Default/button-selected.png",
+      "layer0.tint": "",
       "layer1.opacity": 0.3,
       "layer1.texture": "Slick/Themes/Default/icon-use-gitignore.png"
     },
@@ -278,13 +290,13 @@
       "attributes": [
         "hover"
       ],
-      "layer1.opacity": 0.6
+      "layer1.opacity": 1
     },
     {
       "class": "icon_use_gitignore",
       "layer0.opacity": 1,
-      "layer0.texture": "Slick/Themes/Default/button-selected.png",
-      "layer1.opacity": 0.6,
+      "layer0.tint": "",
+      "layer1.opacity": 1,
       "parents": [
         {
           "class": "icon_button_control",
@@ -301,7 +313,8 @@
         11
       ],
       "layer0.opacity": 0,
-      "layer0.texture": "",
+      "layer0.texture": "Slick/Themes/Default/button-selected.png",
+      "layer0.tint": "",
       "layer1.opacity": 0.3,
       "layer1.texture": "Slick/Themes/Default/icon-whole-word.png"
     },
@@ -310,13 +323,13 @@
       "attributes": [
         "hover"
       ],
-      "layer1.opacity": 0.6
+      "layer1.opacity": 1
     },
     {
       "class": "icon_whole_word",
       "layer0.opacity": 1,
-      "layer0.texture": "Slick/Themes/Default/button-selected.png",
-      "layer1.opacity": 0.6,
+      "layer0.tint": "",
+      "layer1.opacity": 1,
       "parents": [
         {
           "class": "icon_button_control",
@@ -333,7 +346,8 @@
         11
       ],
       "layer0.opacity": 0,
-      "layer0.texture": "",
+      "layer0.texture": "Slick/Themes/Default/button-selected.png",
+      "layer0.tint": "",
       "layer1.opacity": 0.3,
       "layer1.texture": "Slick/Themes/Default/icon-wrap.png"
     },
@@ -342,13 +356,13 @@
       "attributes": [
         "hover"
       ],
-      "layer1.opacity": 0.6
+      "layer1.opacity": 1
     },
     {
       "class": "icon_wrap",
       "layer0.opacity": 1,
-      "layer0.texture": "Slick/Themes/Default/button-selected.png",
-      "layer1.opacity": 0.6,
+      "layer0.tint": "",
+      "layer1.opacity": 1,
       "parents": [
         {
           "class": "icon_button_control",
@@ -1165,6 +1179,21 @@
       "inside_spacing": 5,
       "outside_hspacing": 5,
       "outside_vspacing": 5
+    },
+    {
+      "class": "text_output_control",
+      "color_scheme_tint": "#fff",
+      "content_margin": [
+        10,
+        10,
+        10,
+        10
+      ],
+      "parents": [
+        {
+          "class": "window"
+        }
+      ]
     },
     {
       "class": "quick_panel_row",

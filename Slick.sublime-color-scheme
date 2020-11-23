@@ -1,8 +1,14 @@
 {
   "globals": {
     "background": "#eeeeef",
-    "foreground": "#272727",
     "caret": "#00bbff",
-    "selection": "#c2e8ff"
+    "find_highlight": "#ffe792",
+    "find_highlight_foreground": "#000000",
+    "foreground": "#272727",
+    "inactive_selection": "#ededed",
+    "invisibles": "#e0e0e0",
+    "line_highlight": "#00bbff15",
+    "selection": "#c2e8ff",
+    "selection_border": "#aacbdf",
   },
 }
