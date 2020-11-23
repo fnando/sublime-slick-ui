@@ -1,7 +1,8 @@
 {
   "draw_shadows": false,
-  "line_padding_top": 3,
-  "line_padding_bottom": 3,
+  "line_padding_top": 2,
+  "line_padding_bottom": 0,
   "font_size": 13,
-  "overlay_scroll_bars": "enabled"
+  "overlay_scroll_bars": "enabled",
+  "color_scheme": "Slick.sublime-color-scheme"
 }
