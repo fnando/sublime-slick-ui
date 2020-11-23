@@ -22,6 +22,7 @@
     "tab_active_fg": "var(blackish)",
     "tab_inactive_bg": "#e3e3e3",
     "tab_inactive_fg": "var(grayish)",
+    "tab_border_color": "#d9d9d9",
     "label_fg": "#fff",
     "label_hover_fg": "#fff",
 
@@ -247,19 +248,54 @@
      */
     {
       "class": "tabset_control",
-      "content_margin": [0, 10, 10, 0],
-      "tab_height": 40,
-      "tint_index": -1,
-      "parents": [{ "class": "window" }],
       "layer0.tint": "var(tab_bar_bg)",
+
+      "layer1.draw_center": false,
+      "layer1.inner_margin": [0, 0, 0, 1],
+      "layer1.tint": "var(tab_border_color)",
+      "layer1.opacity": 1,
+
+      "content_margin": [0, 10, 8, 0],
       "layer0.opacity": 1,
-      "layer3.texture": "",
-      "tab_overlap": 0
+      "tint_index": 1,
+      "tab_overlap": 0,
+      "tab_width": 120,
+      "tab_height": 40,
+      "mouse_wheel_switch": false
     },
+
     {
       "class": "tab_control",
       "content_margin": [20, 10, 10, 10]
     },
+
+    {
+      "class": "tab_control",
+      "layer0.texture": "",
+      "layer0.tint": "var(blackish)",
+      "layer0.opacity": 1,
+
+      "layer1.texture": "",
+      "layer1.tint": "var(tab_inactive_bg)",
+      "layer1.opacity": 1,
+
+      "layer3.draw_center": false,
+      "layer3.texture": "",
+      "layer3.tint": "var(tab_border_color)",
+      "layer3.inner_margin": [0, 0, 0, 1],
+      "layer3.opacity": 1,
+      "layer3.inner_margin": [0, 1, 1, 0]
+    },
+    {
+      "class": "tab_control",
+      "attributes": ["selected"],
+      "layer2.tint": "var(tab_active_bg)",
+      "layer2.opacity": 1.0,
+      "layer3.texture": "Slick/Themes/Default/tab-selected.png",
+      "layer3.tint": "var(bluish-selected)",
+      "layer3.inner_margin": [0, 3, 0, 0]
+    },
+
     {
       "class": "tab_label",
       "parents": [{ "class": "tab_control" }],
@@ -325,38 +361,6 @@
       "parents": [{ "class": "tab_control", "attributes": ["selected"] }],
       "layer0.tint": "#7d7d7d",
       "layer0.opacity": 0.5
-    },
-
-    {
-      "class": "tab_control",
-      "tint_index": -1,
-      "layer2.tint": "var(tab_inactive_bg)",
-      "layer2.opacity": 1,
-      "layer3.draw_center": false,
-      "layer3.inner_margin": [4, 4],
-      "layer3.opacity": 0
-    },
-
-    {
-      "class": "tab_control",
-      // Layer 0: content
-      "layer0.tint": "var(tab_bar_bg)",
-      "layer0.opacity": 1.0,
-
-      // Layer 1: border
-      "layer1.tint": "var(tab_bar_bg)",
-      "layer1.opacity": 1.0,
-      "layer1.inner_margin": [0, 0, 1, 0],
-      "layer1.draw_center": false
-    },
-
-    {
-      "class": "tab_control",
-      "attributes": ["selected"],
-      "layer2.tint": "var(tab_active_bg)",
-      "layer3.texture": "Slick/Themes/Default/tab-selected.png",
-      "layer3.tint": "var(bluish-selected)",
-      "layer3.opacity": 1.0
     },
 
     /**
@@ -698,21 +702,6 @@
       "layer1.inner_margin": [0, 1, 0, 0],
       "layer1.draw_center": false
     },
-
-    // {
-    //   "class": "text_output_control",
-    //   "parents": [{ "class": "window" }],
-    //   "color_scheme_tint": "#fff"
-    // },
-
-    // {
-    //   "class": "text_line_control",
-    //   "parents": [{ "class": "panel_control" }],
-    //   "content_margin": 1,
-    //   "layer0.opacity": 1,
-    //   "layer1.tint": "#ddd",
-    //   "layer1.opacity": 1
-    // },
 
     {
       "class": "label_control",
