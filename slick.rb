@@ -600,7 +600,7 @@ theme = Theme.new do
   }
 
   rule :symbol_container, {
-    content_margin: [30, 30, 30, 30]
+    content_margin: [5, 5, 5, 5]
   }
 
   rule :trigger_container, {
