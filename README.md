@@ -1,4 +1,4 @@
-# Slick: Theme for Sublime Text 4000+
+# Slick: Theme for Sublime Text
 
 ![Slick: screenshot](https://github.com/fnando/sublime-slick-ui/raw/main/screenshots/slick.png)
 
