@@ -1090,7 +1090,7 @@
     {
       "class": "auto_complete",
       "layer0.opacity": 1.0,
-      "row_padding": 0,
+      "row_padding": 5,
       "tint_index": 0,
       "tint_modifier": "#fff"
     },

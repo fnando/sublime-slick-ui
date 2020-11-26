@@ -591,7 +591,7 @@ theme = Theme.new do
 
   # Autocomplete ###############################################################
   rule :auto_complete, {
-    row_padding: 0,
+    row_padding: 5,
     tint_index: 0,
     "layer0.opacity": 1.0,
     tint_modifier: white
