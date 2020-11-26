@@ -680,6 +680,13 @@
       "layer3.tint": "#3976ff"
     },
     {
+      "class": "tab_control",
+      "attributes": [
+        "!selected"
+      ],
+      "layer2.opacity": 0
+    },
+    {
       "class": "tab_label",
       "fg": "#959ca9",
       "parents": [

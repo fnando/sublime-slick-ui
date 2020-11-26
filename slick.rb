@@ -352,6 +352,11 @@ theme = Theme.new do
     "layer3.inner_margin": [0, 3, 0, 0]
   }
 
+  rule :tab_control, {
+    attributes: ["!selected"],
+    "layer2.opacity": 0
+  }
+
   rule :tab_label, {
     parents: [{class: "tab_control"}],
     fg: tab_inactive_fg
@@ -591,6 +596,7 @@ theme = Theme.new do
     "layer0.opacity": 1.0,
     tint_modifier: white
   }
+
   rule :table_row, {
     parents: [{class: "auto_complete"}],
     attributes: ["selected"],
