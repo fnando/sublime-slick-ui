@@ -695,6 +695,18 @@ theme = Theme.new do
       "font.italic": false
     }
 
+    # Quick panel link (e.g. package control's install)
+    rule :quick_panel_detail_label, {
+      parents: [{class: parent}],
+      link_color: gray
+    }
+
+    # Quick panel link (Selected)
+    rule :quick_panel_detail_label, {
+      parents: [{class: parent, attributes: ["selected"]}],
+      link_color: "white"
+    }
+
     # Quick Panel Row (Unselected, Hover)
     rule parent, {
       attributes: ["!selected", "hover"],

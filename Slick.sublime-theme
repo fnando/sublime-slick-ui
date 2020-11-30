@@ -1233,6 +1233,27 @@
       "selected_match_fg": "#999"
     },
     {
+      "class": "quick_panel_detail_label",
+      "link_color": "#999",
+      "parents": [
+        {
+          "class": "quick_panel_row"
+        }
+      ]
+    },
+    {
+      "class": "quick_panel_detail_label",
+      "link_color": "white",
+      "parents": [
+        {
+          "class": "quick_panel_row",
+          "attributes": [
+            "selected"
+          ]
+        }
+      ]
+    },
+    {
       "class": "quick_panel_row",
       "attributes": [
         "!selected",
@@ -1359,6 +1380,27 @@
       ],
       "selected_fg": "#999",
       "selected_match_fg": "#999"
+    },
+    {
+      "class": "quick_panel_detail_label",
+      "link_color": "#999",
+      "parents": [
+        {
+          "class": "mini_quick_panel_row"
+        }
+      ]
+    },
+    {
+      "class": "quick_panel_detail_label",
+      "link_color": "white",
+      "parents": [
+        {
+          "class": "mini_quick_panel_row",
+          "attributes": [
+            "selected"
+          ]
+        }
+      ]
     },
     {
       "class": "mini_quick_panel_row",
