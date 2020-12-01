@@ -78,7 +78,6 @@ end
 
 theme = Theme.new do
   variable :blackish, "#252525"
-  variable :blackish, "#252525"
   variable :grayish, "#959ca9"
   variable :bluish, "#007acc"
   variable :light_gray, "#f5f5f5"
