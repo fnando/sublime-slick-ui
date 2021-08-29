@@ -1562,6 +1562,20 @@
     {
       "class": "quick_panel_entry",
       "spacing": 10
+    },
+    {
+      "class": "dialog",
+      "layer0.opacity": 1.0,
+      "layer0.tint": "#f5f5f5"
+    },
+    {
+      "class": "title_label_control",
+      "fg": "#252525"
+    },
+    {
+      "class": "progress_bar_control",
+      "layer0.opacity": 1.0,
+      "layer0.tint": "#007acc"
     }
   ]
 }

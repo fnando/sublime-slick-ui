@@ -58,7 +58,7 @@ class Theme
     end
 
     context[:rules] <<
-      {class: name}.merge(Hash[rule.sort_by {|key, _value| key }])
+      {class: name}.merge(rule.sort_by {|key, _value| key }.to_h)
   end
 
   def dasherize(input)
@@ -553,7 +553,7 @@ theme = Theme.new do
 
   # Input ######################################################################
   rule :text_line_control, {
-    "content_margin": 4,
+    content_margin: 4,
     "layer0.inner_margin": 2,
     "layer0.tint": input_bg,
     "layer0.opacity": 1.0,
@@ -805,6 +805,20 @@ theme = Theme.new do
 
   rule :quick_panel_entry, {
     spacing: 10
+  }
+
+  rule :dialog, {
+    "layer0.tint": light_gray,
+    "layer0.opacity": 1.0
+  }
+
+  rule :title_label_control, {
+    fg: blackish
+  }
+
+  rule :progress_bar_control, {
+    "layer0.tint": bluish,
+    "layer0.opacity": 1.0
   }
 end
 
