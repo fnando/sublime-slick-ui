@@ -807,6 +807,7 @@ theme = Theme.new do
     spacing: 10
   }
 
+  # Other widgets
   rule :dialog, {
     "layer0.tint": light_gray,
     "layer0.opacity": 1.0
